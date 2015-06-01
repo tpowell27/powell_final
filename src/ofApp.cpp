@@ -21,6 +21,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 
+    //here is the variable for the ramdon number
     ram = ofRandom(0,5);
     
     Downsquares tempDown;
@@ -109,45 +110,56 @@ void ofApp::draw() {
 //    search.count = 50;
 //    search.query = "%23BlackLivesMatter+:)";
 
+    
+//  im trying to get a random number generator that will randomly choose a number and then do a search based on that number and then make a square for it.
     if((rand()<=2.005)&&(rand()>=1.995)) {
         ofxTwitterSearch search;
         search.count = 1;
         search.query = "%23BlackLivesMatter+:)";
         twitterClient.startSearch(search);
         
-        ofSetColor(255, 0, 0);
-        ofRect(400, 400, 100, 100);
+        ofSetCircleResolution(100);
+        for(int i=0; i<ups.size(); i++) {
+            ups[i].draw();
+        }
     }
     
     if((rand()<=1.005)&&(rand()>=0.995)) {
         ofxTwitterSearch search;
         search.count = 1;
-        search.query = "cat";
+        search.query = "%23BlackLivesMatter+:(";
         twitterClient.startSearch(search);
         
-        ofSetColor(255, 0, 0);
-        ofRect(400, 400, 100, 100);
+        ofSetCircleResolution(4);
+        for(int i=0; i<downs.size(); i++) {
+            downs[i].draw();
+        }
     }
     
     if((rand()<=3.005)&&(rand()>=2.995)) {
         ofxTwitterSearch search;
         search.count = 1;
-        search.query = "dog";
+        search.query = "%23itgetsbetter+:)";
         twitterClient.startSearch(search);
         
-        ofSetColor(255, 0, 0);
-        ofRect(400, 400, 100, 100);
+        ofSetCircleResolution(100);
+        for(int i=0; i<ups.size(); i++) {
+            ups[i].draw();
+        }
     }
     
     if((rand()<=4.005)&&(rand()>=3.995)) {
         ofxTwitterSearch search;
         search.count = 1;
-        search.query = "bathroom";
+        search.query = "%23itgetsbetter+:(";
         twitterClient.startSearch(search);
         
-        ofSetColor(255, 0, 0);
-        ofRect(400, 400, 100, 100);
+        ofSetCircleResolution(4);
+        for(int i=0; i<downs.size(); i++) {
+            downs[i].draw();
+        }
     }
+    //------------------
     
     string text = tweet.text;
     for(int i=0;i<(tweet.text.length()/maxLineSize)+1;i++) {
@@ -159,15 +171,6 @@ void ofApp::draw() {
         tweet.user.profile_image.draw(40, 150);
     }
     
-    ofSetCircleResolution(100);
-    for(int i=0; i<ups.size(); i++) {
-        ups[i].draw();
-    }
-    
-    ofSetCircleResolution(3);
-    for(int i=0; i<downs.size(); i++) {
-        downs[i].draw();
-    }
 }
 
 //--------------------------------------------------------------
