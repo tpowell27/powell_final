@@ -30,14 +30,14 @@ void ofApp::update(){
     for(int i=0; i<downs.size(); i++) {
         downs[i].update();
         float distance=ofDist(downs[i].start.x,downs[i].start.y,downs[i].pos.x,downs[i].pos.y);
-        if(distance>500){
-            downs.erase(bubbleys.begin()+i);
+        if(distance>900){
+            downs.erase(downs.begin()+i);
             i--;
         }
     }
     
     for(int i=0; i<ups.size(); i++) {
-        balls[i].update();
+        ups[i].update();
         float distance=ofDist(ups[i].start.x,ups[i].start.y,ups[i].pos.x,ups[i].pos.y);
         if(distance>800){
             ups.erase(ups.begin()+i);
