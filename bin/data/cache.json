@@ -1,0 +1,235 @@
+{
+   "search_metadata" : {
+      "completed_in" : 0.011,
+      "count" : 1,
+      "max_id" : 605161532545069056,
+      "max_id_str" : "605161532545069056",
+      "next_results" : "?max_id=605161532545069055&q=%23BlackLivesMatter%20%3A%29&count=1&include_entities=1",
+      "query" : "%23BlackLivesMatter+%3A%29",
+      "refresh_url" : "?since_id=605161532545069056&q=%23BlackLivesMatter%20%3A%29&include_entities=1",
+      "since_id" : 0,
+      "since_id_str" : "0"
+   },
+   "statuses" : [
+      {
+         "contributors" : null,
+         "coordinates" : null,
+         "created_at" : "Sun May 31 23:58:47 +0000 2015",
+         "entities" : {
+            "hashtags" : [
+               {
+                  "indices" : [ 107, 124 ],
+                  "text" : "BlackLivesMatter"
+               }
+            ],
+            "symbols" : [],
+            "urls" : [
+               {
+                  "display_url" : "thedignityvirus.com/2015/05/31/hun…",
+                  "expanded_url" : "http://thedignityvirus.com/2015/05/31/hundreds-hold-peaceful-rally-on-greek-row-at-the-university-of-washington/",
+                  "indices" : [ 125, 140 ],
+                  "url" : "http://t.co/TwwLHer3Yw"
+               }
+            ],
+            "user_mentions" : [
+               {
+                  "id" : 170957760,
+                  "id_str" : "170957760",
+                  "indices" : [ 3, 9 ],
+                  "name" : "grace novacek",
+                  "screen_name" : "gnovs"
+               }
+            ]
+         },
+         "favorite_count" : 0,
+         "favorited" : false,
+         "geo" : null,
+         "id" : 605161532545069056,
+         "id_str" : "605161532545069056",
+         "in_reply_to_screen_name" : null,
+         "in_reply_to_status_id" : null,
+         "in_reply_to_status_id_str" : null,
+         "in_reply_to_user_id" : null,
+         "in_reply_to_user_id_str" : null,
+         "is_quote_status" : false,
+         "lang" : "en",
+         "metadata" : {
+            "iso_language_code" : "en",
+            "result_type" : "recent"
+         },
+         "place" : null,
+         "possibly_sensitive" : false,
+         "retweet_count" : 1,
+         "retweeted" : false,
+         "retweeted_status" : {
+            "contributors" : null,
+            "coordinates" : {
+               "coordinates" : [ 0, 0 ],
+               "type" : "Point"
+            },
+            "created_at" : "Sun May 31 22:39:25 +0000 2015",
+            "entities" : {
+               "hashtags" : [
+                  {
+                     "indices" : [ 96, 113 ],
+                     "text" : "BlackLivesMatter"
+                  }
+               ],
+               "symbols" : [],
+               "urls" : [
+                  {
+                     "display_url" : "thedignityvirus.com/2015/05/31/hun…",
+                     "expanded_url" : "http://thedignityvirus.com/2015/05/31/hundreds-hold-peaceful-rally-on-greek-row-at-the-university-of-washington/",
+                     "indices" : [ 114, 136 ],
+                     "url" : "http://t.co/TwwLHer3Yw"
+                  }
+               ],
+               "user_mentions" : []
+            },
+            "favorite_count" : 5,
+            "favorited" : false,
+            "geo" : {
+               "coordinates" : [ 0, 0 ],
+               "type" : "Point"
+            },
+            "id" : 605141561131696128,
+            "id_str" : "605141561131696128",
+            "in_reply_to_screen_name" : null,
+            "in_reply_to_status_id" : null,
+            "in_reply_to_status_id_str" : null,
+            "in_reply_to_user_id" : null,
+            "in_reply_to_user_id_str" : null,
+            "is_quote_status" : false,
+            "lang" : "en",
+            "metadata" : {
+               "iso_language_code" : "en",
+               "result_type" : "recent"
+            },
+            "place" : {
+               "attributes" : {},
+               "bounding_box" : {
+                  "coordinates" : [
+                     [
+                        [ -122.436232, 47.4953154 ],
+                        [ -122.2249728, 47.4953154 ],
+                        [ -122.2249728, 47.734561 ],
+                        [ -122.436232, 47.734561 ]
+                     ]
+                  ],
+                  "type" : "Polygon"
+               },
+               "contained_within" : [],
+               "country" : "United States",
+               "country_code" : "US",
+               "full_name" : "Seattle, WA",
+               "id" : "300bcc6e23a88361",
+               "name" : "Seattle",
+               "place_type" : "city",
+               "url" : "https://api.twitter.com/1.1/geo/id/300bcc6e23a88361.json"
+            },
+            "possibly_sensitive" : false,
+            "retweet_count" : 1,
+            "retweeted" : false,
+            "source" : "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+            "text" : "so proud of UW. this was an awesome, *peaceful* event and i'm glad i got to be a part of it. :) #BlackLivesMatter http://t.co/TwwLHer3Yw",
+            "truncated" : false,
+            "user" : {
+               "contributors_enabled" : false,
+               "created_at" : "Mon Jul 26 06:00:46 +0000 2010",
+               "default_profile" : false,
+               "default_profile_image" : false,
+               "description" : "630 ✈️ 206",
+               "entities" : {
+                  "description" : {
+                     "urls" : []
+                  }
+               },
+               "favourites_count" : 20440,
+               "follow_request_sent" : false,
+               "followers_count" : 666,
+               "following" : false,
+               "friends_count" : 384,
+               "geo_enabled" : true,
+               "id" : 170957760,
+               "id_str" : "170957760",
+               "is_translation_enabled" : false,
+               "is_translator" : false,
+               "lang" : "en",
+               "listed_count" : 0,
+               "location" : "",
+               "name" : "grace novacek",
+               "notifications" : false,
+               "profile_background_color" : "000000",
+               "profile_background_image_url" : "http://pbs.twimg.com/profile_background_images/514479770143186944/5h5MJSyK.jpeg",
+               "profile_background_image_url_https" : "https://pbs.twimg.com/profile_background_images/514479770143186944/5h5MJSyK.jpeg",
+               "profile_background_tile" : true,
+               "profile_banner_url" : "https://pbs.twimg.com/profile_banners/170957760/1423729447",
+               "profile_image_url" : "http://pbs.twimg.com/profile_images/604377903871057920/pGjaRXPn_normal.jpg",
+               "profile_image_url_https" : "https://pbs.twimg.com/profile_images/604377903871057920/pGjaRXPn_normal.jpg",
+               "profile_link_color" : "94D487",
+               "profile_sidebar_border_color" : "FFFFFF",
+               "profile_sidebar_fill_color" : "FAD2F7",
+               "profile_text_color" : "000000",
+               "profile_use_background_image" : true,
+               "protected" : false,
+               "screen_name" : "gnovs",
+               "statuses_count" : 8152,
+               "time_zone" : "Central Time (US & Canada)",
+               "url" : null,
+               "utc_offset" : -18000,
+               "verified" : false
+            }
+         },
+         "source" : "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+         "text" : "RT @gnovs: so proud of UW. this was an awesome, *peaceful* event and i'm glad i got to be a part of it. :) #BlackLivesMatter http://t.co/Tw…",
+         "truncated" : false,
+         "user" : {
+            "contributors_enabled" : false,
+            "created_at" : "Mon Aug 02 00:23:54 +0000 2010",
+            "default_profile" : false,
+            "default_profile_image" : false,
+            "description" : "Darkness can not drive out darkness. Only light can do that. Hate can not drive out hate. Only love can do that - MLK",
+            "entities" : {
+               "description" : {
+                  "urls" : []
+               }
+            },
+            "favourites_count" : 3643,
+            "follow_request_sent" : false,
+            "followers_count" : 616,
+            "following" : false,
+            "friends_count" : 569,
+            "geo_enabled" : false,
+            "id" : 173639825,
+            "id_str" : "173639825",
+            "is_translation_enabled" : false,
+            "is_translator" : false,
+            "lang" : "en",
+            "listed_count" : 1,
+            "location" : "doing Jedi things",
+            "name" : "Don B. Hayden Onme ™",
+            "notifications" : false,
+            "profile_background_color" : "03072D",
+            "profile_background_image_url" : "http://pbs.twimg.com/profile_background_images/380310048/xa3b40f59b31fc934aceb257359d5ce5.jpg",
+            "profile_background_image_url_https" : "https://pbs.twimg.com/profile_background_images/380310048/xa3b40f59b31fc934aceb257359d5ce5.jpg",
+            "profile_background_tile" : false,
+            "profile_banner_url" : "https://pbs.twimg.com/profile_banners/173639825/1353316395",
+            "profile_image_url" : "http://pbs.twimg.com/profile_images/584391601725767681/zqS0luJi_normal.jpg",
+            "profile_image_url_https" : "https://pbs.twimg.com/profile_images/584391601725767681/zqS0luJi_normal.jpg",
+            "profile_link_color" : "16818E",
+            "profile_sidebar_border_color" : "FFFFFF",
+            "profile_sidebar_fill_color" : "030516",
+            "profile_text_color" : "A7394D",
+            "profile_use_background_image" : true,
+            "protected" : false,
+            "screen_name" : "hbeast11",
+            "statuses_count" : 12985,
+            "time_zone" : "Central Time (US & Canada)",
+            "url" : null,
+            "utc_offset" : -18000,
+            "verified" : false
+         }
+      }
+   ]
+}
+
