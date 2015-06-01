@@ -1,6 +1,6 @@
 {
    "search_metadata" : {
-      "completed_in" : 0.011,
+      "completed_in" : 0.021,
       "count" : 1,
       "max_id" : 605161532545069056,
       "max_id_str" : "605161532545069056",
@@ -144,7 +144,7 @@
                      "urls" : []
                   }
                },
-               "favourites_count" : 20440,
+               "favourites_count" : 20448,
                "follow_request_sent" : false,
                "followers_count" : 666,
                "following" : false,
@@ -173,7 +173,7 @@
                "profile_use_background_image" : true,
                "protected" : false,
                "screen_name" : "gnovs",
-               "statuses_count" : 8152,
+               "statuses_count" : 8155,
                "time_zone" : "Central Time (US & Canada)",
                "url" : null,
                "utc_offset" : -18000,
@@ -194,7 +194,7 @@
                   "urls" : []
                }
             },
-            "favourites_count" : 3643,
+            "favourites_count" : 3644,
             "follow_request_sent" : false,
             "followers_count" : 616,
             "following" : false,
@@ -223,7 +223,7 @@
             "profile_use_background_image" : true,
             "protected" : false,
             "screen_name" : "hbeast11",
-            "statuses_count" : 12985,
+            "statuses_count" : 12986,
             "time_zone" : "Central Time (US & Canada)",
             "url" : null,
             "utc_offset" : -18000,

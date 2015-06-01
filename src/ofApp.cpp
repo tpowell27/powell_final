@@ -3,11 +3,12 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     
-    ofBackground(255);
-    ofSetFrameRate(1);
+    ofBackground(150);
+    ofSetFrameRate(30);
 
     twitterClient.setDiskCache(true);
     
+//  Authorizes the application on twitter.
     string const CONSUMER_KEY = "sxkC3z0mHGEUzWHjNrJBMMWWv";
     string const CONSUMER_SECRET = "ins31Rr1wigG4WRtuAl85y3ptGAnwwXtC3o193ddS00UFqRTcW";
     
@@ -15,238 +16,154 @@ void ofApp::setup(){
     
     actualTweet = 0;
     
-    float ram;
+//  The variable that determines the random number to choose tweets.
+    int ram;
+//  Sets which squares to draw based on which tweets are coming in.
+    bool grh = false;
+    bool grs = false;
+    bool blh = false;
+    bool bls = false;
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
-    //here is the variable for the ramdon number
-    ram = ofRandom(0,5);
     
+//  Updates the squares.
     Downsquares tempDown;
-    tempDown.setup(ofRandom(0,ofGetWindowWidth()),ofRandom(0,ofGetWindowHeight()));
+    tempDown.setup();
     downs.push_back(tempDown);
     
-    for(int i=0; i<downs.size(); i++) {
-        downs[i].update();
-        float distance=ofDist(downs[i].start.x,downs[i].start.y,downs[i].pos.x,downs[i].pos.y);
-        if(distance>900){
-            downs.erase(downs.begin()+i);
-            i--;
-        }
-    }
+    Upsquares tempUp;
+    tempUp.setup();
+    ups.push_back(tempUp);
     
-    for(int i=0; i<ups.size(); i++) {
-        ups[i].update();
-        float distance=ofDist(ups[i].start.x,ups[i].start.y,ups[i].pos.x,ups[i].pos.y);
-        if(distance>800){
-            ups.erase(ups.begin()+i);
-            i--;
-        }
-    }
-    
-    if(ofGetMousePressed()){
+//  Calls a random search every ten seconds. Recieved tweets determine which squares to draw.
+    if(ofGetFrameNum()%300==0) {
+        ofxTwitterSearch search;
+        ram = ofRandom(0,3);
         
-        Upsquares tempUp;
-        tempUp.setup();
-        ups.push_back(tempUp);
-    }
+        if(ram==0){
+        search.count = 1;
+        search.query = "%23BlackLivesMatter+:)";
+        twitterClient.startSearch(search);
+        
+        blh = true;
 
+        }
+
+        if(ram==1) {
+        search.count = 1;
+        search.query = "%23BlackLivesMatter+:(";
+        twitterClient.startSearch(search);
+        
+        bls = true;
+        }
+        
+        if(ram==2) {
+        search.count = 1;
+        search.query = "%23itgetsbetter+:)";
+        twitterClient.startSearch(search);
+        
+        grh = true;
+        }
+
+        if(ram==3) {
+        search.count = 1;
+        search.query = "%23itgetsbetter+:(";
+        twitterClient.startSearch(search);
+        
+        grs = true;
+        }
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
     
-    // Print tweets:
+//  Sets the maximum line size to 140 characters, the same as a normal online tweet.
+    int maxLineSize = 140;
     
-    int maxLineSize = 90;
-    
-    ofSetColor(0);
-    ofDrawBitmapString(ofToString(ram), ofPoint(220,420));
-    
-    
+//  Checks to make sure the
     if(twitterClient.getTotalLoadedTweets() > 0) {
         
         tweet = twitterClient.getTweetByIndex(actualTweet);
-        
-        ofSetColor(255, 255, 255, 125);
-        if(tweet.isBannerImageLoaded()) {
-            tweet.user.profile_banner.draw(0, 0, ofGetWidth(), ofGetHeight());
+
+    }
+
+    twitterClient.printDebugInfo();
+
+//  Determines which tweet to search based on a random number generator. Each search has a different colored square.
+    for (int i=0; i<ups.size(); i++) {
+        ups[i].update();
+        if(blh==true) {
+        ofSetColor(0, 0, 255,ofRandom(50,200));
+        ofSetCircleResolution(4);
+        for(int i=0; i<ups.size(); i++) {
+            ups[i].draw();
         }
-        
-        ofSetColor(0);
-        
-//        ofDrawBitmapString("User:", ofPoint(120,150));
-//        ofDrawBitmapStringHighlight(tweet.user.screen_name, ofPoint(220,150));
-//        
-//        ofDrawBitmapString("Location:", ofPoint(120,180));
-//        ofDrawBitmapStringHighlight(tweet.user.location, ofPoint(220,180));
-        
-//        ofDrawBitmapString("Descript.:", ofPoint(120,210));
-//        string desc = tweet.user.description;
-//        for(int i=0;i<(desc.length()/maxLineSize)+1;i++) {
-//            ofDrawBitmapStringHighlight(desc.substr(i*maxLineSize,maxLineSize), ofPoint(220,210+(30*i)));
-//        }
-        
-//        ofDrawBitmapString("Text:", ofPoint(10,10));
-//it goes here
-        
-//        ofSetColor(0);
-//        string nav = "Now showing tweet: " + ofToString(actualTweet+1) + " of "+ofToString(twitterClient.getTotalLoadedTweets());
-//        ofDrawBitmapString(nav, ofPoint(220,420));
-        
+    }
     }
     
-    ofSetColor(0);
-    string info;
-    //info += "\nPress 'l' to load previous query from disk if avilable";
-    //info += "\nPress UP/DOWN to navigate tweets";
-    //ofDrawBitmapString(info, ofPoint(20,20));
+    for (int i=0; i<downs.size(); i++) {
+        downs[i].update();
+        if(bls==true) {
+        ofSetColor(255, 0, 0,ofRandom(50,200));
+        ofSetCircleResolution(4);
+        for(int i=0; i<downs.size(); i++) {
+            downs[i].draw();
+        }
+    }
+    }
     
-    twitterClient.printDebugInfo();
-//    
-//    ofxTwitterSearch search;
-//    search.count = 50;
-//    search.query = "%23BlackLivesMatter+:)";
+    for (int i=0; i<ups.size(); i++) {
+        ups[i].update();
+    if(grh==true) {
+
+        ofSetColor(0,ofRandom(175,255),255,ofRandom(50,200));
+        ofSetCircleResolution(4);
+        for(int i=0; i<ups.size(); i++) {
+            ups[i].draw();
+        }
+    }
+    }
+    
+    for (int i=0; i<downs.size(); i++) {
+        downs[i].update();
+    if(grs==true) {
+        ofSetColor(255, ofRandom(175,255),0,ofRandom(50,200));
+        ofSetCircleResolution(4);
+        for(int i=0; i<downs.size(); i++) {
+            downs[i].draw();
+        }
+    }
+    }
 
     
-//  im trying to get a random number generator that will randomly choose a number and then do a search based on that number and then make a square for it.
-    if((rand()<=2.005)&&(rand()>=1.995)) {
-        ofxTwitterSearch search;
-        search.count = 1;
-        search.query = "%23BlackLivesMatter+:)";
-        twitterClient.startSearch(search);
-        
-        ofSetCircleResolution(100);
-        for(int i=0; i<ups.size(); i++) {
-            ups[i].draw();
+//  Compares the distance from the starting point to the length of the tweet its self. The distance is scaled to match the tweet length and is erased after traveling the equivelant of the length of the text.
+    for(int i=0; i<downs.size(); i++) {
+        downs[i].update();
+        float distance=ofDist(downs[i].dstart.x,downs[i].dstart.y,downs[i].dpos.x,downs[i].dpos.y);
+        float lnt= ofMap(distance,0,100,0,maxLineSize);
+        if(lnt>tweet.text.length()){
+            downs.erase(downs.begin()+i);
+            i--;
+        }
+    }
+    for(int i=0; i<ups.size(); i++) {
+        ups[i].update();
+        float distance=ofDist(ups[i].ustart.x,ups[i].ustart.y,ups[i].upos.x,ups[i].upos.y);
+        float lnt= ofMap(distance,0,100,0,maxLineSize);
+        if(lnt>tweet.text.length()){
+            ups.erase(ups.begin()+i);
+            i--;
         }
     }
     
-    if((rand()<=1.005)&&(rand()>=0.995)) {
-        ofxTwitterSearch search;
-        search.count = 1;
-        search.query = "%23BlackLivesMatter+:(";
-        twitterClient.startSearch(search);
-        
-        ofSetCircleResolution(4);
-        for(int i=0; i<downs.size(); i++) {
-            downs[i].draw();
-        }
-    }
-    
-    if((rand()<=3.005)&&(rand()>=2.995)) {
-        ofxTwitterSearch search;
-        search.count = 1;
-        search.query = "%23itgetsbetter+:)";
-        twitterClient.startSearch(search);
-        
-        ofSetCircleResolution(100);
-        for(int i=0; i<ups.size(); i++) {
-            ups[i].draw();
-        }
-    }
-    
-    if((rand()<=4.005)&&(rand()>=3.995)) {
-        ofxTwitterSearch search;
-        search.count = 1;
-        search.query = "%23itgetsbetter+:(";
-        twitterClient.startSearch(search);
-        
-        ofSetCircleResolution(4);
-        for(int i=0; i<downs.size(); i++) {
-            downs[i].draw();
-        }
-    }
-    //------------------
-    
+//  Draws the tweet in the upper left corner.
     string text = tweet.text;
     for(int i=0;i<(tweet.text.length()/maxLineSize)+1;i++) {
         ofDrawBitmapStringHighlight(text.substr(i*maxLineSize,maxLineSize), ofPoint(20,20+(30*i)));
     }
     
-    ofSetColor(255, 255, 255);
-    if(tweet.isProfileImageLoaded()) {
-        tweet.user.profile_image.draw(40, 150);
-    }
-    
-}
-
-//--------------------------------------------------------------
-void ofApp::keyPressed(int key){
-
-    if(key == 'q') {
-        // Simple Query. You can find tweets containing that word.
-        ofxTwitterSearch search;
-        search.count = 1;
-        search.query = "%23BlackLivesMatter+:)";
-        twitterClient.startSearch(search);
-        
-        ofSetColor(255, 0, 0);
-    }
-
-//    if(key == 's') {
-//        // Complex search. You can specify more params.
-//        ofxTwitterSearch search;
-//        search.query = "%23BlackLivesMatter+:)";
-//        search.count = 1;
-//        //search.geocode = ofVec2f(41.3850640,2.1734030);
-//        //search.geocode_radius = 2;
-//        //search.bUseMiles = false;
-//        search.lang = "es";
-//        twitterClient.startSearch(search);
-//    }
-    
-    if(key == 'l') {
-        twitterClient.loadCacheFile();
-    }
-    
-    if(key == OF_KEY_UP) {
-        if(actualTweet < twitterClient.getTotalLoadedTweets()-1) actualTweet += 1;
-    }
-    
-    if(key == OF_KEY_DOWN) {
-        if(actualTweet > 0) actualTweet -= 1;
-    }
-}
-
-//--------------------------------------------------------------
-void ofApp::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
-
 }
