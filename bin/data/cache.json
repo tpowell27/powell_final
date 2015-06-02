@@ -1,12 +1,12 @@
 {
    "search_metadata" : {
-      "completed_in" : 0.021,
+      "completed_in" : 0.038,
       "count" : 1,
-      "max_id" : 605161532545069056,
-      "max_id_str" : "605161532545069056",
-      "next_results" : "?max_id=605161532545069055&q=%23BlackLivesMatter%20%3A%29&count=1&include_entities=1",
-      "query" : "%23BlackLivesMatter+%3A%29",
-      "refresh_url" : "?since_id=605161532545069056&q=%23BlackLivesMatter%20%3A%29&include_entities=1",
+      "max_id" : 605434937215447040,
+      "max_id_str" : "605434937215447040",
+      "next_results" : "?max_id=605434937215447039&q=%23itgetsbetter%20%3A%29&count=1&include_entities=1",
+      "query" : "%23itgetsbetter+%3A%29",
+      "refresh_url" : "?since_id=605434937215447040&q=%23itgetsbetter%20%3A%29&include_entities=1",
       "since_id" : 0,
       "since_id_str" : "0"
    },
@@ -14,44 +14,36 @@
       {
          "contributors" : null,
          "coordinates" : null,
-         "created_at" : "Sun May 31 23:58:47 +0000 2015",
+         "created_at" : "Mon Jun 01 18:05:12 +0000 2015",
          "entities" : {
             "hashtags" : [
                {
-                  "indices" : [ 107, 124 ],
-                  "text" : "BlackLivesMatter"
+                  "indices" : [ 77, 90 ],
+                  "text" : "ItGetsBetter"
                }
             ],
             "symbols" : [],
             "urls" : [
                {
-                  "display_url" : "thedignityvirus.com/2015/05/31/hun…",
-                  "expanded_url" : "http://thedignityvirus.com/2015/05/31/hundreds-hold-peaceful-rally-on-greek-row-at-the-university-of-washington/",
-                  "indices" : [ 125, 140 ],
-                  "url" : "http://t.co/TwwLHer3Yw"
+                  "display_url" : "twitter.com/BenBuckwalter/…",
+                  "expanded_url" : "https://twitter.com/BenBuckwalter/status/605232080008671232",
+                  "indices" : [ 91, 114 ],
+                  "url" : "https://t.co/UkJkYjH9b3"
                }
             ],
-            "user_mentions" : [
-               {
-                  "id" : 170957760,
-                  "id_str" : "170957760",
-                  "indices" : [ 3, 9 ],
-                  "name" : "grace novacek",
-                  "screen_name" : "gnovs"
-               }
-            ]
+            "user_mentions" : []
          },
          "favorite_count" : 0,
          "favorited" : false,
          "geo" : null,
-         "id" : 605161532545069056,
-         "id_str" : "605161532545069056",
+         "id" : 605434937215447040,
+         "id_str" : "605434937215447040",
          "in_reply_to_screen_name" : null,
          "in_reply_to_status_id" : null,
          "in_reply_to_status_id_str" : null,
          "in_reply_to_user_id" : null,
          "in_reply_to_user_id_str" : null,
-         "is_quote_status" : false,
+         "is_quote_status" : true,
          "lang" : "en",
          "metadata" : {
             "iso_language_code" : "en",
@@ -59,41 +51,21 @@
          },
          "place" : null,
          "possibly_sensitive" : false,
-         "retweet_count" : 1,
-         "retweeted" : false,
-         "retweeted_status" : {
+         "quoted_status" : {
             "contributors" : null,
-            "coordinates" : {
-               "coordinates" : [ 0, 0 ],
-               "type" : "Point"
-            },
-            "created_at" : "Sun May 31 22:39:25 +0000 2015",
+            "coordinates" : null,
+            "created_at" : "Mon Jun 01 04:39:07 +0000 2015",
             "entities" : {
-               "hashtags" : [
-                  {
-                     "indices" : [ 96, 113 ],
-                     "text" : "BlackLivesMatter"
-                  }
-               ],
+               "hashtags" : [],
                "symbols" : [],
-               "urls" : [
-                  {
-                     "display_url" : "thedignityvirus.com/2015/05/31/hun…",
-                     "expanded_url" : "http://thedignityvirus.com/2015/05/31/hundreds-hold-peaceful-rally-on-greek-row-at-the-university-of-washington/",
-                     "indices" : [ 114, 136 ],
-                     "url" : "http://t.co/TwwLHer3Yw"
-                  }
-               ],
+               "urls" : [],
                "user_mentions" : []
             },
-            "favorite_count" : 5,
+            "favorite_count" : 416,
             "favorited" : false,
-            "geo" : {
-               "coordinates" : [ 0, 0 ],
-               "type" : "Point"
-            },
-            "id" : 605141561131696128,
-            "id_str" : "605141561131696128",
+            "geo" : null,
+            "id" : 605232080008671232,
+            "id_str" : "605232080008671232",
             "in_reply_to_screen_name" : null,
             "in_reply_to_status_id" : null,
             "in_reply_to_status_id_str" : null,
@@ -105,128 +77,119 @@
                "iso_language_code" : "en",
                "result_type" : "recent"
             },
-            "place" : {
-               "attributes" : {},
-               "bounding_box" : {
-                  "coordinates" : [
-                     [
-                        [ -122.436232, 47.4953154 ],
-                        [ -122.2249728, 47.4953154 ],
-                        [ -122.2249728, 47.734561 ],
-                        [ -122.436232, 47.734561 ]
-                     ]
-                  ],
-                  "type" : "Polygon"
-               },
-               "contained_within" : [],
-               "country" : "United States",
-               "country_code" : "US",
-               "full_name" : "Seattle, WA",
-               "id" : "300bcc6e23a88361",
-               "name" : "Seattle",
-               "place_type" : "city",
-               "url" : "https://api.twitter.com/1.1/geo/id/300bcc6e23a88361.json"
-            },
-            "possibly_sensitive" : false,
-            "retweet_count" : 1,
+            "place" : null,
+            "retweet_count" : 62,
             "retweeted" : false,
-            "source" : "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-            "text" : "so proud of UW. this was an awesome, *peaceful* event and i'm glad i got to be a part of it. :) #BlackLivesMatter http://t.co/TwwLHer3Yw",
+            "source" : "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+            "text" : "Confessing my depression and anxiety issues was one of the hardest things I had done in awhile. But I'm glad I did.",
             "truncated" : false,
             "user" : {
                "contributors_enabled" : false,
-               "created_at" : "Mon Jul 26 06:00:46 +0000 2010",
-               "default_profile" : false,
+               "created_at" : "Fri Dec 26 19:49:39 +0000 2014",
+               "default_profile" : true,
                "default_profile_image" : false,
-               "description" : "630 ✈️ 206",
+               "description" : "My life consists of trying new things, traveling, and making videos. I just want to make a difference in this world. My past is my past. Leave it there.",
                "entities" : {
                   "description" : {
                      "urls" : []
+                  },
+                  "url" : {
+                     "urls" : [
+                        {
+                           "display_url" : "instagram.com/buckwalter_ben",
+                           "expanded_url" : "http://instagram.com/buckwalter_ben",
+                           "indices" : [ 0, 22 ],
+                           "url" : "http://t.co/VUaX5MHXF0"
+                        }
+                     ]
                   }
                },
-               "favourites_count" : 20448,
+               "favourites_count" : 8058,
                "follow_request_sent" : false,
-               "followers_count" : 666,
+               "followers_count" : 41849,
                "following" : false,
-               "friends_count" : 384,
-               "geo_enabled" : true,
-               "id" : 170957760,
-               "id_str" : "170957760",
+               "friends_count" : 27296,
+               "geo_enabled" : false,
+               "id" : 2942605451,
+               "id_str" : "2942605451",
                "is_translation_enabled" : false,
                "is_translator" : false,
                "lang" : "en",
-               "listed_count" : 0,
+               "listed_count" : 33,
                "location" : "",
-               "name" : "grace novacek",
+               "name" : "Ben Buckwalter",
                "notifications" : false,
-               "profile_background_color" : "000000",
-               "profile_background_image_url" : "http://pbs.twimg.com/profile_background_images/514479770143186944/5h5MJSyK.jpeg",
-               "profile_background_image_url_https" : "https://pbs.twimg.com/profile_background_images/514479770143186944/5h5MJSyK.jpeg",
-               "profile_background_tile" : true,
-               "profile_banner_url" : "https://pbs.twimg.com/profile_banners/170957760/1423729447",
-               "profile_image_url" : "http://pbs.twimg.com/profile_images/604377903871057920/pGjaRXPn_normal.jpg",
-               "profile_image_url_https" : "https://pbs.twimg.com/profile_images/604377903871057920/pGjaRXPn_normal.jpg",
-               "profile_link_color" : "94D487",
-               "profile_sidebar_border_color" : "FFFFFF",
-               "profile_sidebar_fill_color" : "FAD2F7",
-               "profile_text_color" : "000000",
+               "profile_background_color" : "C0DEED",
+               "profile_background_image_url" : "http://abs.twimg.com/images/themes/theme1/bg.png",
+               "profile_background_image_url_https" : "https://abs.twimg.com/images/themes/theme1/bg.png",
+               "profile_background_tile" : false,
+               "profile_banner_url" : "https://pbs.twimg.com/profile_banners/2942605451/1422135953",
+               "profile_image_url" : "http://pbs.twimg.com/profile_images/589918408008937472/4ZA6X29S_normal.jpg",
+               "profile_image_url_https" : "https://pbs.twimg.com/profile_images/589918408008937472/4ZA6X29S_normal.jpg",
+               "profile_link_color" : "0084B4",
+               "profile_sidebar_border_color" : "C0DEED",
+               "profile_sidebar_fill_color" : "DDEEF6",
+               "profile_text_color" : "333333",
                "profile_use_background_image" : true,
                "protected" : false,
-               "screen_name" : "gnovs",
-               "statuses_count" : 8155,
-               "time_zone" : "Central Time (US & Canada)",
-               "url" : null,
-               "utc_offset" : -18000,
+               "screen_name" : "BenBuckwalter",
+               "statuses_count" : 1749,
+               "time_zone" : null,
+               "url" : "http://t.co/VUaX5MHXF0",
+               "utc_offset" : null,
                "verified" : false
             }
          },
-         "source" : "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
-         "text" : "RT @gnovs: so proud of UW. this was an awesome, *peaceful* event and i'm glad i got to be a part of it. :) #BlackLivesMatter http://t.co/Tw…",
+         "quoted_status_id" : 605232080008671232,
+         "quoted_status_id_str" : "605232080008671232",
+         "retweet_count" : 0,
+         "retweeted" : false,
+         "source" : "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+         "text" : "You know we always have your back Benny. Keep your head up. You got this. :) #ItGetsBetter https://t.co/UkJkYjH9b3",
          "truncated" : false,
          "user" : {
             "contributors_enabled" : false,
-            "created_at" : "Mon Aug 02 00:23:54 +0000 2010",
+            "created_at" : "Mon Sep 12 12:19:29 +0000 2011",
             "default_profile" : false,
             "default_profile_image" : false,
-            "description" : "Darkness can not drive out darkness. Only light can do that. Hate can not drive out hate. Only love can do that - MLK",
+            "description" : "Singer. Band Photographer. Music=Life @blackveilbrides Met @ccbvb and @ashleypurdy 11/28",
             "entities" : {
                "description" : {
                   "urls" : []
                }
             },
-            "favourites_count" : 3644,
+            "favourites_count" : 479,
             "follow_request_sent" : false,
-            "followers_count" : 616,
+            "followers_count" : 549,
             "following" : false,
-            "friends_count" : 569,
+            "friends_count" : 1881,
             "geo_enabled" : false,
-            "id" : 173639825,
-            "id_str" : "173639825",
+            "id" : 372243665,
+            "id_str" : "372243665",
             "is_translation_enabled" : false,
             "is_translator" : false,
             "lang" : "en",
-            "listed_count" : 1,
-            "location" : "doing Jedi things",
-            "name" : "Don B. Hayden Onme ™",
+            "listed_count" : 3,
+            "location" : "Upstate, NY",
+            "name" : "Betsy",
             "notifications" : false,
-            "profile_background_color" : "03072D",
-            "profile_background_image_url" : "http://pbs.twimg.com/profile_background_images/380310048/xa3b40f59b31fc934aceb257359d5ce5.jpg",
-            "profile_background_image_url_https" : "https://pbs.twimg.com/profile_background_images/380310048/xa3b40f59b31fc934aceb257359d5ce5.jpg",
+            "profile_background_color" : "000000",
+            "profile_background_image_url" : "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https" : "https://abs.twimg.com/images/themes/theme1/bg.png",
             "profile_background_tile" : false,
-            "profile_banner_url" : "https://pbs.twimg.com/profile_banners/173639825/1353316395",
-            "profile_image_url" : "http://pbs.twimg.com/profile_images/584391601725767681/zqS0luJi_normal.jpg",
-            "profile_image_url_https" : "https://pbs.twimg.com/profile_images/584391601725767681/zqS0luJi_normal.jpg",
-            "profile_link_color" : "16818E",
-            "profile_sidebar_border_color" : "FFFFFF",
-            "profile_sidebar_fill_color" : "030516",
-            "profile_text_color" : "A7394D",
-            "profile_use_background_image" : true,
+            "profile_image_url" : "http://pbs.twimg.com/profile_images/485820855784448002/SNul_A6u_normal.png",
+            "profile_image_url_https" : "https://pbs.twimg.com/profile_images/485820855784448002/SNul_A6u_normal.png",
+            "profile_link_color" : "9266CC",
+            "profile_sidebar_border_color" : "000000",
+            "profile_sidebar_fill_color" : "000000",
+            "profile_text_color" : "000000",
+            "profile_use_background_image" : false,
             "protected" : false,
-            "screen_name" : "hbeast11",
-            "statuses_count" : 12986,
-            "time_zone" : "Central Time (US & Canada)",
+            "screen_name" : "Majormusso247",
+            "statuses_count" : 2298,
+            "time_zone" : null,
             "url" : null,
-            "utc_offset" : -18000,
+            "utc_offset" : null,
             "verified" : false
          }
       }
