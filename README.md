@@ -1,47 +1,49 @@
 
-
 ##API Moods
 This projects analyzes the moods of twitter users regarding the hastags #BlackLivesMatter and #itgetsbetter. Based on incoming tweets the diamonds on the screen change.
 
-The squares move and die based on the length of the tweet.
+The squares move and die based on the length of the tweet. The length is scale to a certain distance.
 
-    posx+=lft;
-    posx2-=lft;
-    posy+=lft;
-    posy2-=lft;
-    if((posx>=0.9)||(posx<=0.4)){
-        lft*=-1;
-    }
-    if((posx2>=0.6)||(posx2<=0.1)){
-        lft*=-1;
-    }
-    if((posx3>=0.6)||(posx3<=-0.6)){
-        lft*=-1;
-    }
-    if((posy>=0.25)||(posy<=0.05)){
-        lft*=-1;
-    }
-    if((posy2>=0.25)||(posy2<=0.05)){
-        lft*=-1;
-    }
-    if((posy3>=-0.25)||(posy3<=0)){
-        lft*=-1;
-    }
-
-Here each sphere uses a copy of this code with changes made to its position in order to give the triangle shape.
-
-for(int i = 0; i < finder.size(); i++) {
-            ofRectangle object = finder.getObjectSmoothed(i);
-            sunglasses.setAnchorPercent(.5, .5);
-            float scaleAmount = .90 * object.width / 					sunglasses.getWidth();
-            ofPushMatrix();
-            ofTranslate(object.x + object.width * 1.75 * posx, 			object.y + object.height * posy);
-            ofScale(scaleAmount, scaleAmount);
-            sphere.draw();
-            ofPopMatrix();
-            ofPushMatrix();
-            ofTranslate(object.getPosition());
-            ofDrawBitmapStringHighlight(ofToString(finder.getLabel(i)), 0, 0);
-            ofLine(ofVec2f(), toOf(finder.getVelocity(i)) * 10);
-            ofPopMatrix();
+    for(int i=0; i<downs.size(); i++) {
+        downs[i].update();
+        float distance=ofDist(downs[i].dstart.x,downs[i].dstart.y,downs[i].dpos.x,downs[i].dpos.y);
+        float lnt= ofMap(distance,0,100,0,maxLineSize);
+        if(lnt>tweet.text.length()){
+            downs.erase(downs.begin()+i);
+            i--;
         }
+    }
+    for(int i=0; i<ups.size(); i++) {
+        ups[i].update();
+        float distance=ofDist(ups[i].ustart.x,ups[i].ustart.y,ups[i].upos.x,ups[i].upos.y);
+        float lnt= ofMap(distance,0,100,0,maxLineSize);
+        if(lnt>tweet.text.length()){
+            ups.erase(ups.begin()+i);
+            i--;
+        }
+    }
+    
+The objects are generated randomly based on tweets containing either :) or :(.
+
+        if(ram==0){
+        search.count = 1;
+        search.query = "%23BlackLivesMatter+:)";
+        twitterClient.startSearch(search);
+        
+        blh = true;
+
+        }
+        
+        for (int i=0; i<ups.size(); i++) {
+        ups[i].update();
+        if(blh==true) {
+        ofSetColor(0, 0, 255,ofRandom(50,200));
+        ofSetCircleResolution(4);
+        for(int i=0; i<ups.size(); i++) {
+            ups[i].draw();
+        }
+    }
+    }
+
+
+   
